@@ -206,6 +206,7 @@ I'm preparing selected projects for public release.
 
 Future repositories will include:
 
+-DevProfile Studio
 - Clear technical documentation.
 - Architecture and design decisions.
 - Technology stack descriptions.
