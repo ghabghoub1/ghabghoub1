@@ -259,7 +259,6 @@ I'm continuously expanding my technical knowledge and exploring technologies tha
 
 <br/><br/>
 
-<sub>Statistics are automatically generated and updated using GitHub Actions.</sub>
 
 </div>
 
