@@ -282,7 +282,7 @@ I'm continuously expanding my technical knowledge and exploring technologies tha
 
 <br/>
 
-<sub>Contribution activity generated through an automated GitHub Actions workflow.</sub>
+
 
 </div>
 
