@@ -92,16 +92,18 @@ I'm also exploring Artificial Intelligence, intelligent automation and multi-age
 
 ---
 
+
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img height="180" src="https://github-stats-extended.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Statistics" />
-  <img height="180" src="https://github-stats-extended.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true" alt="Most Used Languages" />
+  <img src="./profile/stats.svg" height="180" alt="GitHub Statistics"/>
+  <img src="./profile/top-langs.svg" height="180" alt="Top Languages"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=ghabghoub1&theme=tokyonight&hide_border=true" alt="GitHub Contribution Streak" />
+  <img src="https://streak-stats.demolab.com?user=ghabghoub1&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
 </p>
+
 
 ---
 
