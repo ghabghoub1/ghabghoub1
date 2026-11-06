@@ -1,53 +1,57 @@
+<!-- PROFILE BANNER -->
 <p align="center">
   <img src="./assets/profile-banner.png" width="100%" alt="Mohamed Lamine Rahali - Software Engineer"/>
 </p>
 
+<!-- INTRODUCTION -->
+<h1 align="center">Hi, I'm Mohamed Lamine Rahali 👋</h1>
+
+<h3 align="center">Software Engineer | Java Developer | AI Enthusiast</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Software+Solutions;Java+%26+Spring+Boot+Developer;Exploring+AI+%26+Multi-Agent+Systems;Turning+Ideas+Into+Reality" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Software+Solutions;Java+%26+Spring+Boot+Developer;Exploring+AI+%26+Multi-Agent+Systems;Turning+Ideas+Into+Reliable+Software" alt="Typing SVG"/>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/mohamed-lamine-rahali/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="https://github.com/ghabghoub1">
-    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </p>
 
 ---
 
-## 🚀 About Me
+## 👨‍💻 About Me
 
-I'm an IT Engineer and Java Developer passionate about building reliable, scalable and maintainable software solutions.
+I'm an IT Engineer and Java Developer passionate about designing and building reliable, scalable and maintainable software solutions.
 
-With professional experience in Java development and IT engineering, I focus on backend development, enterprise applications, system architecture and modern software technologies.
+My primary focus is backend engineering, enterprise applications, API development and software architecture. I'm also exploring Artificial Intelligence, automation and multi-agent systems.
 
-I'm also exploring Artificial Intelligence, intelligent automation and multi-agent architectures to understand how software systems can become more autonomous and capable.
-
-- 🎓 IT Engineer — ESPRIT (2021).
-- 💻 Java Developer with approximately 5 years of professional development experience.
-- ⚙️ Backend development with Java and Spring Boot.
-- 🏗️ Interested in software architecture and microservices.
-- 🤖 Exploring Artificial Intelligence and multi-agent systems.
+- 🎓 IT Engineer — ESPRIT, 2021.
+- 💻 Approximately 3 years of professional Java development experience.
+- ☕ Java 17 and Spring Boot.
+- 🏗️ REST APIs, microservices and backend architecture.
+- 🤖 Exploring AI and multi-agent architectures.
+- 🗄️ PostgreSQL, MySQL and database design.
 - 🌍 Based in Tunisia.
-- 🎯 Always learning, building and improving.
+- 🚀 Interested in building technology that solves real-world problems.
 
 ---
 
-## 🛠️ Technical Skills
+## 🛠️ Technology Stack
 
 ### Programming Languages
 
 <p>
-  <img src="https://skillicons.dev/icons?i=java,js,ts,html,css" />
+  <img src="https://skillicons.dev/icons?i=java,js,ts,html,css" alt="Programming Languages"/>
 </p>
 
-### Backend Development
+### Backend Engineering
 
 <p>
-  <img src="https://skillicons.dev/icons?i=spring,hibernate,maven" />
+  <img src="https://skillicons.dev/icons?i=spring,hibernate,maven" alt="Backend Technologies"/>
 </p>
 
 - Java 17
@@ -55,75 +59,88 @@ I'm also exploring Artificial Intelligence, intelligent automation and multi-age
 - Spring Security
 - Spring Data JPA
 - Hibernate
-- REST APIs
-- Microservices
+- RESTful APIs
 - JWT Authentication
+- Microservices
 
 ### Databases
 
 <p>
-  <img src="https://skillicons.dev/icons?i=postgres,mysql" />
+  <img src="https://skillicons.dev/icons?i=postgres,mysql" alt="Databases"/>
 </p>
 
-### Tools & Development Environment
+### Tools & Infrastructure
 
 <p>
-  <img src="https://skillicons.dev/icons?i=git,github,docker,idea,vscode,postman" />
+  <img src="https://skillicons.dev/icons?i=git,github,docker,idea,vscode,postman" alt="Development Tools"/>
 </p>
 
 ### Areas of Interest
 
 - Artificial Intelligence
 - Multi-Agent Systems
-- System Architecture
+- Software Architecture
 - Cloud Computing
 - DevOps & Automation
 - Cybersecurity
 
 ---
 
-## 📌 What I'm Working On
+## 🚀 Featured Projects
 
-- Building scalable backend applications using Java and Spring Boot.
-- Exploring AI-powered applications and multi-agent architectures.
-- Improving software architecture and engineering practices.
-- Developing practical solutions that solve real-world problems.
+I believe in demonstrating engineering skills through practical projects, clean architecture and well-documented code.
+
+Selected public projects will be showcased here as they are prepared for publication.
+
+<!--
+PROJECT TEMPLATE
+
+### Project Name
+Short description of the project.
+
+Technologies: Java | Spring Boot | PostgreSQL | Docker
+
+Repository: https://github.com/ghabghoub1/PROJECT_NAME
+
+Demo: YOUR_DEMO_URL
+-->
 
 ---
-
 
 ## 📊 GitHub Statistics
 
 <p align="center">
   <img src="./profile/stats.svg" height="180" alt="GitHub Statistics"/>
-  <img src="./profile/top-langs.svg" height="180" alt="Top Languages"/>
+  <img src="./profile/top-langs.svg" height="180" alt="Most Used Languages"/>
 </p>
+
+## 🔥 Contribution Streak
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=ghabghoub1&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
+  <img src="https://streak-stats.demolab.com?user=ghabghoub1&theme=tokyonight&hide_border=true" alt="GitHub Contribution Streak"/>
 </p>
 
+## 📈 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ghabghoub1&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub Contribution Activity Graph"/>
+</p>
 
 ---
 
-
 ## 🤝 Let's Connect
 
-I'm always interested in connecting with developers, discussing technology, exchanging ideas and exploring opportunities.
+I'm always interested in exchanging ideas, discussing software engineering, exploring new technologies and connecting with other developers.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/mohamed-lamine-rahali/">
-    <img src="https://img.shields.io/badge/LinkedIn-Mohamed%20Lamine%20Rahali-0A66C2?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/LinkedIn-Mohamed%20Lamine%20Rahali-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="https://github.com/ghabghoub1">
-    <img src="https://img.shields.io/badge/GitHub-ghabghoub1-181717?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/GitHub-ghabghoub1-181717?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </p>
 
 <p align="center">
-  <i>"Great software is built through curiosity, discipline and continuous improvement."</i>
-</p>
-
-<p align="center">
-  ⭐ Thanks for visiting my profile!
+  <i>Build. Innovate. Engineer.</i>
 </p>
