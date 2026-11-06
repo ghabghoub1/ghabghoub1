@@ -251,16 +251,16 @@ I'm continuously expanding my technical knowledge and exploring technologies tha
 
 ## 📊 GitHub Statistics
 
-<div align="center">
+<p align="center">
+  <img src="./profile/stats.svg" height="245" alt="GitHub Statistics"/>
+  <img src="./profile/top-langs.svg" height="245" alt="Most Used Languages"/>
+</p>
 
-<img src="./profile/stats.svg" height="180" alt="Mohamed Lamine Rahali GitHub Statistics"/>
+## 📈 Contribution Activity
 
-<img src="./profile/top-langs.svg" height="180" alt="Most Used Programming Languages"/>
-
-<br/><br/>
-
-
-</div>
+<p align="center">
+  <img src="./profile/activity-graph.svg" width="100%" alt="GitHub Contribution Activity"/>
+</p>
 
 ---
 
