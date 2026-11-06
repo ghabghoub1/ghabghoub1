@@ -95,8 +95,8 @@ I'm also exploring Artificial Intelligence, intelligent automation and multi-age
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Statistics" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true" alt="Most Used Languages" />
+  <img height="180" src="https://github-stats-extended.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Statistics" />
+  <img height="180" src="https://github-stats-extended.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true" alt="Most Used Languages" />
 </p>
 
 <p align="center">
@@ -104,6 +104,7 @@ I'm also exploring Artificial Intelligence, intelligent automation and multi-age
 </p>
 
 ---
+
 
 ## 🤝 Let's Connect
 
