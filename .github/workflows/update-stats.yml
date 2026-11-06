@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: github-profile-stats
+  cancel-in-progress: false
+
 jobs:
   update-stats:
     runs-on: ubuntu-24.04
@@ -17,75 +21,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create profile directory
-        run: mkdir -p profile
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      - name: Download statistics
-        shell: bash
+      - name: Generate GitHub Statistics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          download_svg() {
-            local name="$1"
-            local url="$2"
-            local output="profile/${name}.svg"
-            local temp="profile/${name}.tmp"
+          python scripts/generate_stats.py
 
-            echo "Downloading $name..."
-
-            status=$(curl -sSL \
-              --retry 3 \
-              --max-time 90 \
-              -A "Mozilla/5.0" \
-              -w "%{http_code}" \
-              -o "$temp" \
-              "$url") || {
-                echo "::warning::Network error downloading $name"
-                rm -f "$temp"
-                return 0
-              }
-
-            echo "HTTP status for $name: $status"
-
-            if [[ "$status" != "200" ]]; then
-              echo "::warning::$name returned HTTP $status"
-              rm -f "$temp"
-              return 0
-            fi
-
-            if python3 - "$temp" <<'PY'
-          import sys
-          import xml.etree.ElementTree as ET
-
-          root = ET.parse(sys.argv[1]).getroot()
-          assert root.tag == "{http://www.w3.org/2000/svg}svg"
-          PY
-            then
-              mv "$temp" "$output"
-              echo "Successfully updated $name"
-            else
-              echo "::warning::Invalid SVG for $name"
-              rm -f "$temp"
-            fi
-          }
-
-          download_svg "stats" \
-            "https://github-readme-stats.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true"
-
-          download_svg "top-langs" \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true"
-
-          download_svg "activity-graph" \
-            "https://github-readme-activity-graph.vercel.app/graph?username=ghabghoub1&theme=react-dark&hide_border=true&area=true"
-
-      - name: Commit updated statistics
+      - name: Commit updated SVG files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile/*.svg
+          git add profile/stats.svg
+          git add profile/top-langs.svg
+          git add profile/activity-graph.svg
 
           if git diff --cached --quiet; then
-            echo "No changes detected"
+            echo "No changes to commit"
           else
-            git commit -m "chore: update profile statistics"
+            git commit -m "chore: update GitHub profile statistics"
             git push
           fi
