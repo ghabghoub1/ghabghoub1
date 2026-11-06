@@ -9,13 +9,9 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: github-profile-stats
-  cancel-in-progress: false
-
 jobs:
   update-stats:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
@@ -24,67 +20,61 @@ jobs:
       - name: Create profile directory
         run: mkdir -p profile
 
-      - name: Generate GitHub Statistics
-        continue-on-error: true
+      - name: Download statistics
+        shell: bash
         run: |
-          curl -fLsS --retry 3 --max-time 60 \
-            "https://github-readme-stats.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" \
-            -o profile/stats.tmp.svg
+          download_svg() {
+            local name="$1"
+            local url="$2"
+            local output="profile/${name}.svg"
+            local temp="profile/${name}.tmp"
 
-      - name: Generate Most Used Languages
-        continue-on-error: true
-        run: |
-          curl -fLsS --retry 3 --max-time 60 \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" \
-            -o profile/top-langs.tmp.svg
+            echo "Downloading $name..."
 
-      - name: Generate Contribution Activity Graph
-        continue-on-error: true
-        run: |
-          curl -fLsS --retry 3 --max-time 60 \
-            "https://github-readme-activity-graph.vercel.app/graph?username=ghabghoub1&theme=react-dark&hide_border=true&area=true" \
-            -o profile/activity-graph.tmp.svg
+            status=$(curl -sSL \
+              --retry 3 \
+              --max-time 90 \
+              -A "Mozilla/5.0" \
+              -w "%{http_code}" \
+              -o "$temp" \
+              "$url") || {
+                echo "::warning::Network error downloading $name"
+                rm -f "$temp"
+                return 0
+              }
 
-      - name: Validate and update SVG files
-        run: |
-          python3 - <<'PY'
+            echo "HTTP status for $name: $status"
+
+            if [[ "$status" != "200" ]]; then
+              echo "::warning::$name returned HTTP $status"
+              rm -f "$temp"
+              return 0
+            fi
+
+            if python3 - "$temp" <<'PY'
+          import sys
           import xml.etree.ElementTree as ET
-          from pathlib import Path
 
-          profile = Path("profile")
-
-          files = [
-              "stats.svg",
-              "top-langs.svg",
-              "activity-graph.svg",
-          ]
-
-          for filename in files:
-              target = profile / filename
-              temporary = profile / filename.replace(".svg", ".tmp.svg")
-
-              if not temporary.exists():
-                  print(f"WARNING: Download failed for {filename}")
-                  continue
-
-              try:
-                  root = ET.parse(temporary).getroot()
-
-                  if root.tag != "{http://www.w3.org/2000/svg}svg":
-                      raise ValueError("Invalid SVG root element")
-
-                  if temporary.stat().st_size < 500:
-                      raise ValueError("SVG file is unexpectedly small")
-
-                  temporary.replace(target)
-
-                  print(f"SUCCESS: Updated {filename}")
-
-              except Exception as error:
-                  print(f"ERROR: {filename}: {error}")
-                  temporary.unlink(missing_ok=True)
-
+          root = ET.parse(sys.argv[1]).getroot()
+          assert root.tag == "{http://www.w3.org/2000/svg}svg"
           PY
+            then
+              mv "$temp" "$output"
+              echo "Successfully updated $name"
+            else
+              echo "::warning::Invalid SVG for $name"
+              rm -f "$temp"
+            fi
+          }
+
+          download_svg "stats" \
+            "https://github-readme-stats.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true"
+
+          download_svg "top-langs" \
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true"
+
+          download_svg "activity-graph" \
+            "https://github-readme-activity-graph.vercel.app/graph?username=ghabghoub1&theme=react-dark&hide_border=true&area=true"
 
       - name: Commit updated statistics
         run: |
@@ -92,11 +82,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add profile/*.svg
-          git reset -q -- 'profile/*.tmp.svg' 2>/dev/null || true
 
           if git diff --cached --quiet; then
-            echo "No statistics updates available"
+            echo "No changes detected"
           else
-            git commit -m "chore: update GitHub profile statistics"
+            git commit -m "chore: update profile statistics"
             git push
           fi
