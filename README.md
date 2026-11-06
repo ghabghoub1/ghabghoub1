@@ -1,16 +1,44 @@
-## Hi there 👋
+<h1 align="center">Hi, I'm Mohamed Lamine Rahali 👋</h1>
 
-<!--
-**ghabghoub1/ghabghoub1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h3 align="center">
+  Java Developer | Software Engineer | AI Enthusiast
+</h3>
 
-Here are some ideas to get you started:
+<p align="center">
+  Building reliable, scalable and intelligent software solutions.
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 👨‍💻 About Me
+
+- 🎓 IT Engineer graduated from ESPRIT.
+- 💻 Java Developer with 3+ years of experience.
+- 🚀 Focused on Java 17, Spring Boot and Microservices.
+- 🧠 Interested in AI, multi-agent systems and architecture.
+- 🌍 Based in Tunisia.
+- 🎯 Always learning and building new things.
+
+## 🛠️ Tech Stack
+
+### Backend
+Java | Spring Boot | Spring Security | Hibernate
+
+### Database
+PostgreSQL | MySQL
+
+### Tools
+Git | Docker | Maven | IntelliJ IDEA
+
+### Interests
+Artificial Intelligence | System Architecture | Cloud
+
+## 📊 GitHub Statistics
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight)
+
+---
+
+## 🤝 Connect With Me
+
+[LinkedIn](YOUR_LINKEDIN_URL)
