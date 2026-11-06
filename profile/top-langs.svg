@@ -36,31 +36,45 @@
     </text>
     
             <text x="25" y="70" class="label">
-                Python
+                TypeScript
             </text>
 
             <rect x="160" y="58"
-                  width="138.4"
+                  width="157.1"
                   height="10" rx="5"
                   fill="#38BDF8"/>
 
             <text x="390" y="70" class="label"
                   text-anchor="end">
-                69.2%
+                78.6%
             </text>
             
             <text x="25" y="99" class="label">
-                Java
+                Python
             </text>
 
             <rect x="160" y="87"
-                  width="61.6"
+                  width="29.7"
                   height="10" rx="5"
                   fill="#7C3AED"/>
 
             <text x="390" y="99" class="label"
                   text-anchor="end">
-                30.8%
+                14.8%
+            </text>
+            
+            <text x="25" y="128" class="label">
+                Java
+            </text>
+
+            <rect x="160" y="116"
+                  width="13.2"
+                  height="10" rx="5"
+                  fill="#F59E0B"/>
+
+            <text x="390" y="128" class="label"
+                  text-anchor="end">
+                6.6%
             </text>
             
     </svg>
