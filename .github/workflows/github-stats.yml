@@ -1,0 +1,74 @@
+name: Update GitHub Profile Statistics
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create profile directory
+        run: mkdir -p profile
+
+      - name: Generate GitHub Statistics
+        run: |
+          curl --fail --location --retry 3 \
+            "https://github-readme-stats.vercel.app/api?username=ghabghoub1&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" \
+            -o profile/stats.svg
+
+      - name: Generate Most Used Languages
+        run: |
+          curl --fail --location --retry 3 \
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=ghabghoub1&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" \
+            -o profile/top-langs.svg
+
+      - name: Generate Contribution Activity Graph
+        run: |
+          curl --fail --location --retry 3 \
+            "https://github-readme-activity-graph.vercel.app/graph?username=ghabghoub1&theme=react-dark&hide_border=true&area=true" \
+            -o profile/activity-graph.svg
+
+      - name: Validate SVG files
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          for filename in [
+              "stats.svg",
+              "top-langs.svg",
+              "activity-graph.svg",
+          ]:
+              path = Path("profile") / filename
+
+              root = ET.parse(path).getroot()
+
+              if root.tag != "{http://www.w3.org/2000/svg}svg":
+                  raise ValueError(f"Invalid SVG: {filename}")
+
+              print(f"Validated: {filename}")
+          PY
+
+      - name: Commit updated statistics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add profile/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update GitHub profile statistics"
+            git push
+          fi
