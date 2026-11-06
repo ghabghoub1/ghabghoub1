@@ -36,7 +36,7 @@ jobs:
       - name: Commit generated statistics
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
           git commit -m "chore: update GitHub profile statistics" || exit 0
           git push
