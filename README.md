@@ -1,8 +1,7 @@
-# 👋 Hi, I'm Mohamed Lamine Rahali
+<p align="center">
+  <img src="./assets/profile-banner.png" width="100%" alt="Mohamed Lamine Rahali - Software Engineer"/>
+</p>
 
-<h3 align="center">
-  Software Engineer | Java Developer | AI Enthusiast
-</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Software+Solutions;Java+%26+Spring+Boot+Developer;Exploring+AI+%26+Multi-Agent+Systems;Turning+Ideas+Into+Reality" alt="Typing SVG" />
