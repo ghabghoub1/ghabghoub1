@@ -41,4 +41,4 @@ Artificial Intelligence | System Architecture | Cloud
 
 ## 🤝 Connect With Me
 
-[LinkedIn](YOUR_LINKEDIN_URL)
+[[LinkedIn]](https://www.linkedin.com/in/mohamed-lamine-rahali/)
