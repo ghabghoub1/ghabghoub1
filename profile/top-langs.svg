@@ -40,41 +40,55 @@
             </text>
 
             <rect x="160" y="58"
-                  width="157.1"
+                  width="131.4"
                   height="10" rx="5"
                   fill="#38BDF8"/>
 
             <text x="390" y="70" class="label"
                   text-anchor="end">
-                78.6%
+                65.7%
             </text>
             
             <text x="25" y="99" class="label">
-                Python
+                CSS
             </text>
 
             <rect x="160" y="87"
-                  width="29.7"
+                  width="46.2"
                   height="10" rx="5"
                   fill="#7C3AED"/>
 
             <text x="390" y="99" class="label"
                   text-anchor="end">
-                14.8%
+                23.1%
             </text>
             
             <text x="25" y="128" class="label">
-                Java
+                Python
             </text>
 
             <rect x="160" y="116"
-                  width="13.2"
+                  width="15.5"
                   height="10" rx="5"
                   fill="#F59E0B"/>
 
             <text x="390" y="128" class="label"
                   text-anchor="end">
-                6.6%
+                7.8%
+            </text>
+            
+            <text x="25" y="157" class="label">
+                Java
+            </text>
+
+            <rect x="160" y="145"
+                  width="6.9"
+                  height="10" rx="5"
+                  fill="#10B981"/>
+
+            <text x="390" y="157" class="label"
+                  text-anchor="end">
+                3.5%
             </text>
             
     </svg>
