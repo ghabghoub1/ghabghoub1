@@ -50,7 +50,7 @@
 
         <text x="390" y="117" class="value"
               text-anchor="end">
-            2
+            3
         </text>
         
         <text x="25" y="159" class="label">
@@ -68,7 +68,7 @@
 
         <text x="390" y="201" class="value"
               text-anchor="end">
-            80
+            90
         </text>
         
     </svg>
